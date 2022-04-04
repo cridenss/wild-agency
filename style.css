@@ -83,7 +83,6 @@ nav ul li a:hover{
 
 .card-container{
     text-transform: uppercase;
-    letter-spacing: 10px;
     transition: ease-in-out .3s;
     color: black;
 }
@@ -120,7 +119,9 @@ nav ul li a:hover{
     background-image: url(pic3.webp);
 }
 
-
+.card h5{
+    letter-spacing: 10px;
+}
 
 @media all and (max-width: 1400px){
 
@@ -147,6 +148,11 @@ nav ul li a:hover{
         margin-left: 0;
         width: 175px;
         height: 230px;
+    }
+
+    .card h5{
+        font-size: 12px;
+        letter-spacing: 7px;
     }
 }
 @media all and (max-width: 768px){
