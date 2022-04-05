@@ -14,7 +14,7 @@
     <script type="text/javascript" src="./script.js" defer></script>
 </head>
 <body>
-    <main id="main">
+    <main id="main-container">
         <header>
             <nav>
                 <ul>
@@ -39,40 +39,55 @@
             </nav>
         </header>
 
-        <div class="cards">
+        <section class="card-section">
             <div class="card-container">
-                <div id="card-1" class="card" data-aos="fade-down">
+                <a id="card-1" class="card" href="#mountain-section" data-aos="fade-down">
                     <h5>mountain</h5>
-                </div>
+                </a>
             </div>
             <div class="card-container">
-                <div id="card-2" class="card" data-aos="fade-down">
+                <a id="card-2" class="card" data-aos="fade-down" href="#forest-section">
                     <h5>forest</h5>
-                </div>
+                </a>
             </div>
             <div class="card-container">
-                <div id="card-3" class="card" data-aos="fade-down">
+                <a id="card-3" class="card" data-aos="fade-down" href="#ocean-section">
                     <h5>ocean</h5>
-                </div>
-                </div>
-                <h1>CLEMENT JE VAIS HACKER TON PC ENCULE</h1>
-                <h2>Je viens de hacker ton pc</h2>
-        </div>
+                </a>
+            </div>
+        </section>
 
-    
+        <section data-aos="fade-zoom-in" class="section1" id="mountain-section">
+                <img class="img-part" src="img/mountain.jpg" alt="mountain">
+            <div class="text-part">
+                <h2>climbing to the top</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tellus magna, efficitur a arcu id, imperdiet vehicula quam. In vel est vitae lectus cursus elementum a quis tellus. Donec varius elit id est suscipit porta. Nunc pharetra volutpat magna ut dictum. Nam id eleifend felis. Maecenas sit amet lacus eros. Suspendisse consequat nisi eget turpis fringilla, eget malesuada orci iaculis.</p>
+            </div>
+        </section>
 
+        <section data-aos="fade-zoom-in" class="section1" id="forest-section">
+                <img class="img-part" src="img/forest.jpg" alt="mountain">
+            <div class="text-part">
+                <h2>being wild</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tellus magna, efficitur a arcu id, imperdiet vehicula quam. In vel est vitae lectus cursus elementum a quis tellus. Donec varius elit id est suscipit porta. Nunc pharetra volutpat magna ut dictum. Nam id eleifend felis. Maecenas sit amet lacus eros. Suspendisse consequat nisi eget turpis fringilla, eget malesuada orci iaculis.</p>
+            </div>
+        </section>
 
-
-        <div id="baptiste" class="humain homme yeux-bleux p-2"></div>
+        <section data-aos="fade-zoom-in" class="section1" id="ocean-section">
+                <img class="img-part" src="img/ocean.jpg" alt="mountain">
+            <div class="text-part">
+                <h2>getting wet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tellus magna, efficitur a arcu id, imperdiet vehicula quam. In vel est vitae lectus cursus elementum a quis tellus. Donec varius elit id est suscipit porta. Nunc pharetra volutpat magna ut dictum. Nam id eleifend felis. Maecenas sit amet lacus eros. Suspendisse consequat nisi eget turpis fringilla, eget malesuada orci iaculis.</p>
+            </div>
+        </section>
+        
     </main>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1500,
-        mirror: true,
-        
+        duration: 1500,    
     });
 
     </script>

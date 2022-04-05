@@ -4,21 +4,27 @@
     box-sizing: border-box;
 }
 
-h1{
-    margin-top: 100px;
-}
+html {
+    scroll-behavior: smooth;
+  }
 
-#main{
+#main-container{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/img1.jpg);
     background-position: center;
     background-size: cover;
-    position: absolute;
     display: flex;
     flex-direction: column;
-    padding-bottom: 800px;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* HEADER */
 
 header{
     padding-top: 40px;
@@ -43,11 +49,10 @@ header{
     text-align:center;
 }
 
-.logo h2{
+h2{
     color: aliceblue;
     text-transform: uppercase;
     letter-spacing: 4px;
-    cursor: pointer;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
 }
@@ -76,14 +81,16 @@ nav ul li a:hover{
     color: rgb(119, 119, 119);
 }
 
-.cards{
+/* SECTION CARD */
+
+.card-section{
     position: relative;
     display: flex;
     color: white;
     justify-content: center;
-    flex-grow: 1;
     align-items: center;
-
+    flex-grow: 1;
+    min-height: 100vh;
 }
 
 .card-container{
@@ -92,12 +99,9 @@ nav ul li a:hover{
     color: black;
 }
 
-.card-container:hover{
-    transform: translateY(-3%);
-    color: transparent;
-}
 
 .card {
+    display: block;
     width: 250px;
     height: 280px;
     margin: 40px 50px;
@@ -107,26 +111,81 @@ nav ul li a:hover{
     cursor: pointer;
     background-position: center;
     background-size: cover;
-}
-
-.card#card-1{
     border-radius: 20px;
-    background-image: url(pic1.jpg);
-}
-
-.card#card-2{
-    border-radius: 10px;
-    background-image: url(pic2.jpg);
-}
-
-.card#card-3{
-    border-radius: 20px;
-    background-image: url(pic3.webp);
 }
 
 .card h5{
     letter-spacing: 10px;
 }
+
+.card#card-1{
+    background-image: url(img/pic1.jpg);
+}
+
+.card#card-2{
+    background-image: url(img/pic2.jpg);
+}
+
+.card#card-3{
+    background-image: url(img/pic3.webp);
+}
+
+.card-container:hover{
+    transform: translateY(-3%);
+}
+
+/* SECTION */
+
+.section1{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.section1::after{
+    content:'';
+    width: 0px;
+    height: 5px;
+    background-color: rgba(139, 145, 139, 0.555);
+    position: absolute;
+    bottom: 140px;
+    left: 250px;
+    transition: all ease-in-out .9s;
+}
+
+.section1:hover::after{
+    width:66%;
+}
+
+.img-part{
+    display: block;
+    height: 400px;
+    margin-right: 5px;
+}
+
+.text-part{
+    background-color: rgba(72, 77, 72, 0.555);
+    width: 500px;
+    height: 400px;
+    margin-left: 5px;
+    padding: 50px;
+    text-align: justify;
+}
+
+.text-part p{
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: 200;
+    font-family: 'Anybody', cursive;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* MEDIA QUERIES */
 
 @media all and (max-width: 1400px){
 
@@ -139,7 +198,7 @@ nav ul li a:hover{
     header{
         flex-direction: column;
     }
-    .cards{   
+    .card-section{   
         flex-direction: column;
     }
 
@@ -159,8 +218,54 @@ nav ul li a:hover{
         font-size: 12px;
         letter-spacing: 7px;
     }
+
+    .section1{
+        flex-direction: column;
+    }
+
+    .img-part{
+        height: 250px;
+    }
+
+    .text-part{
+        height: 300px;
+        width: 400px;
+    }
+
+    .text-part p{
+        margin-top: 30px;
+        font-size: 12px;
+        font-weight: 200;
+        font-family: 'Anybody', cursive;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
 }
 @media all and (max-width: 768px){
+    .img-part{
+        height: 170px;
+    }
+
+    .text-part{
+        height: 300px;
+        width: 300px;
+        padding: 40px;
+    }
+
+    .text-part p{
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 200;
+        font-family: 'Anybody', cursive;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .text-part h2{
+        letter-spacing: 3px;
+        font-weight: 300;
+        font-size: 12px;
+    }
 
 }
 @media all and (max-width: 576px){
