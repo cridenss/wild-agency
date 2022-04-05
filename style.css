@@ -23,6 +23,13 @@ a{
     color: black;
 }
 
+.top-btn{
+    color: #ffffff;
+    position: fixed;
+    top: 80px;
+    width: 20px;
+    text-align: center;
+}
 
 /* HEADER */
 
@@ -192,12 +199,21 @@ nav ul li a:hover{
 }
 
 @media all and (max-width: 1200px){
+    
+    .section1::after{
+        bottom: 115px;
+    }
 
+    .section1#ocean-section::after{
+        width: 600px;
+    }
 }
 @media all and (max-width: 992px){
     header{
         flex-direction: column;
     }
+
+
     .card-section{   
         flex-direction: column;
     }
@@ -240,6 +256,11 @@ nav ul li a:hover{
         color: white;
         font-family: 'Montserrat', sans-serif;
     }
+
+    .section1::after{
+        display: none;
+    }
+    
 }
 @media all and (max-width: 768px){
     .img-part{
