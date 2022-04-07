@@ -122,7 +122,12 @@ nav ul li a:hover{
 }
 
 .card h5{
-    letter-spacing: 10px;
+    transition: all ease-in-out .3s;
+}
+
+
+.card:hover h5{
+    display: none;
 }
 
 .card#card-1{
